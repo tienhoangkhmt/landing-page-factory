@@ -1,0 +1,42 @@
+.timeline-container {
+  display: flex;
+  position: relative;
+  /* width: 80%; */
+  margin: 0 auto;
+}
+
+.timeline {
+  /* width: 90%; */
+  /* height: 400px; */
+  overflow-y: auto;
+  /* border: 1px solid #ddd;
+  padding: 10px; */
+}
+
+.timeline-item {
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+.timeline-scroll {
+  position: relative;
+  width: 5%;
+  height: 400px;
+  background-color: #f0f0f0;
+  border-left: 2px solid #ddd;
+}
+
+.scroll-btn {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+}
