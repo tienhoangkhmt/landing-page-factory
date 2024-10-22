@@ -5,7 +5,7 @@ import MenuFooter from "@/components/Footer/menuFooter";
 import Headers from "@/components/Header";
 import Layout from "@/components/Layout";
 import Text from "@/components/Text";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -15,8 +15,8 @@ import { useState } from "react";
 
 function Page() {
   const [modules, setModules] = useState([Pagination]);
-  const params = useSearchParams();
-  const value = params.get("product-menu") ?? "Overview";
+  const { id } = useParams();
+  const value = id ?? "Overview";
 
   const router = useRouter();
 

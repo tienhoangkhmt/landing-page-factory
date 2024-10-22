@@ -1,14 +1,14 @@
 "use client";
-import { useSearchParams } from "next/navigation";
 import Layout from "@/components/Layout";
 import Headers from "@/components/Header";
 import Text from "@/components/Text";
 import MenuFooter from "@/components/Footer/menuFooter";
 import CopyRight from "@/components/Footer/copyRight";
+import { useParams } from "next/navigation";
 
 function Page() {
-  const params = useSearchParams();
-  const value = params.get("menu") ?? "Overview";
+  const { id } = useParams();
+  const value = id ?? "Overview";
   const array = Array.from("fooaewrwerwe");
 
   return (
@@ -41,44 +41,44 @@ function Page() {
               </Text>
             </div>
             <div className=" flex-wrap justify-between flex gap-10">
-              <div class=" bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className=" bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-lg w-full h-32 sm:h-52 md:h-60 lg:h-72 xl:h-80"
+                    className="rounded-t-lg w-full h-32 sm:h-52 md:h-60 lg:h-72 xl:h-80"
                     src="/images/no-image.png"
                     alt=""
                   />
                 </a>
-                <div class="p-5 bg-[#f3f4f6]">
-                  <Text class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <div className="p-5 bg-[#f3f4f6]">
+                  <Text className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                     Image for illustration purposes only
                   </Text>
                 </div>
               </div>
-              <div class=" bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className=" bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-lg w-full h-32 sm:h-52 md:h-60 lg:h-72 xl:h-80"
+                    className="rounded-t-lg w-full h-32 sm:h-52 md:h-60 lg:h-72 xl:h-80"
                     src="/images/no-image.png"
                     alt=""
                   />
                 </a>
-                <div class="p-5 bg-[#f3f4f6]">
-                  <Text class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <div className="p-5 bg-[#f3f4f6]">
+                  <Text className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                     Image for illustration purposes only
                   </Text>
                 </div>
               </div>
-              <div class=" bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className=" bg-white border w-full border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-lg w-full h-32 sm:h-52 md:h-60 lg:h-72 xl:h-80"
+                    className="rounded-t-lg w-full h-32 sm:h-52 md:h-60 lg:h-72 xl:h-80"
                     src="/images/no-image.png"
                     alt=""
                   />
                 </a>
-                <div class="p-5 bg-[#f3f4f6]">
-                  <Text class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <div className="p-5 bg-[#f3f4f6]">
+                  <Text className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                     Image for illustration purposes only
                   </Text>
                 </div>
@@ -102,7 +102,6 @@ function Page() {
           </section>
         </div>
       </div>
-
       <footer className="w-full">
         <MenuFooter />
         <CopyRight />
